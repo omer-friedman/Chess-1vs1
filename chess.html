@@ -1,0 +1,80 @@
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>Chess Template</title>
+  <link rel="stylesheet" href="css/chessboard.css"/>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+
+  <audio>
+    <source src="sounds/move.mp3"/>
+    <source src="sounds/yahoo.mp3"/>
+  </audio>
+</head>
+<body background="images/chess.png" style="background-position: center;">
+<script src="js/chess.js"></script>
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#" id="logout"></a>
+</nav>
+    <div class="row">
+        <div class="player" id="player_1"></div>
+        <div class="player"></div>
+        <div class="player" id="player_2"></div>
+    </div>
+    <div class="row">
+        <div id="result"></div>
+        <div id="board"></div>
+    </div>
+<!--===============================================================================================-->
+	<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+<!--===============================================================================================-->
+    <script src="js/json3.min.js"></script>
+<!--===============================================================================================-->
+    <script src="js/jquery-1.10.1.min.js"></script>
+<!--===============================================================================================-->
+    <script>
+    var config = {
+    apiKey: "AIzaSyC0cUcDT2D8tsbMQhFb_5WK1faoHtBXY5o",
+    authDomain: "web-hw3-chess.firebaseapp.com",
+    databaseURL: "https://web-hw3-chess.firebaseio.com",
+    projectId: "web-hw3-chess",
+    storageBucket: "web-hw3-chess.appspot.com",
+    messagingSenderId: "446956634342"
+    };
+    firebase.initializeApp(config);
+
+    </script>
+<!--===============================================================================================-->
+    <script src="js/chessboard.js"></script>
+<!--===============================================================================================-->
+    <script src="js/countdown.js"></script>
+<!--===============================================================================================-->
+    <script src="js/game.js"></script>
+<!--===============================================================================================-->
+    <script>
+        $("#logout").click(function(){
+            logout();
+        });
+    </script>
+</body>
+</html>
